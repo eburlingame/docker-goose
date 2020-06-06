@@ -9,7 +9,7 @@ Docker container for [pressly/goose](https://github.com/pressly/goose)
 ```
 docker run --rm \
 	-v "$(pwd)/host-directory-with-migrations:/migrations" \
-	artsafin:docker-goose DRIVER DBSTRING COMMAND
+	artsafin:goose-migrations DRIVER DBSTRING COMMAND
 ```
 
 See original [Usage](https://github.com/pressly/goose#usage) on syntax.
@@ -21,7 +21,7 @@ See original [Usage](https://github.com/pressly/goose#usage) on syntax.
 ```
 docker run --rm \
 	-v "$(pwd)/host-directory-with-migrations:/migrations" \
-	artsafin:docker-goose mysql "root:root@tcp(server:3306)/dbname" create my-new-migration sql
+	artsafin:goose-migrations mysql "root:root@tcp(server:3306)/dbname" create my-new-migration sql
 ```
 
 ### Status
@@ -29,7 +29,7 @@ docker run --rm \
 ```
 docker run --rm \
 	-v "$(pwd)/host-directory-with-migrations:/migrations" \
-	artsafin:docker-goose mysql "root:root@tcp(server:3306)/dbname" status
+	artsafin:goose-migrations mysql "root:root@tcp(server:3306)/dbname" status
 ```
 
 ### Up
@@ -37,5 +37,5 @@ docker run --rm \
 ```
 docker run --rm \
 	-v "$(pwd)/host-directory-with-migrations:/migrations" \
-	artsafin:docker-goose mysql "root:root@tcp(server:3306)/dbname" up
+	artsafin:goose-migrations mysql "root:root@tcp(server:3306)/dbname" up
 ```
