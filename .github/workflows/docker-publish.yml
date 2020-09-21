@@ -14,7 +14,7 @@ on:
   pull_request:
 
 env:
-  IMAGE_NAME: artsafin/docker-goose
+  IMAGE_NAME: docker-goose
 
 jobs:
   # Run tests.
