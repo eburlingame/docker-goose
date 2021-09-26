@@ -8,5 +8,4 @@ FROM alpine:3.14.2
 COPY --from=builder /go/bin/goose /bin/goose
 RUN mkdir -p /migrations
 
-ENTRYPOINT ["/bin/goose"]
 WORKDIR "/migrations"
