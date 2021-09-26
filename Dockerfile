@@ -1,7 +1,7 @@
 # Build
 FROM golang:1.17-alpine as builder
 RUN apk --no-cache add git gcc g++ musl-dev
-RUN go install github.com/pressly/goose/cmd/goose
+RUN go install github.com/pressly/goose/cmd/goose@latest
 
 # Run
 FROM alpine:3.14.2
